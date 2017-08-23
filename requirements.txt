@@ -1,0 +1,4 @@
+flask
+pytest>=3.0
+pytest-runner
+gunicorn
