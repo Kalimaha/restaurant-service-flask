@@ -21,3 +21,10 @@ def test_get_menu_item():
     expected_json = {'id': 42, 'name': 'Spam & Eggs', 'price': 15.0}
 
     assert json == expected_json
+
+
+def test_get_missing_menu_item():
+    tester = app.test_client()
+    response = tester.get('/24/')
+
+    assert response.status_code == 404

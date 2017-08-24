@@ -13,7 +13,8 @@ setup(
     install_requires=[],
     setup_requires=['pytest-runner'],
     tests_require=[
-        'pytest>=3.0'
+        'pytest>=3.0',
+        'pact-test'
     ],
     url='https://github.com/Kalimaha/restaurant-service-flask'
 )

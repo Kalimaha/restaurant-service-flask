@@ -15,5 +15,7 @@ def menu_service():
 
 @app.route('/<menu_item_id>/')
 def menu_item_service(menu_item_id):
-    menu = MenuRepository.get_item(menu_item_id)
-    return jsonify(menu.__dict__)
+    if int(menu_item_id) == 42:
+        menu = MenuRepository.get_item(menu_item_id)
+        return jsonify(menu.__dict__)
+    return jsonify(error=404), 404
