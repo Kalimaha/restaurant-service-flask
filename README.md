@@ -1,10 +1,17 @@
 # Restaurant Service - Flask Version
-Small web-app used to test the [pact-test](https://github.com/Kalimaha/pact-test) library.
+Small web-app used to test the [pact-test](https://github.com/Kalimaha/pact-test) library. All the scripts below are
+based on [Docker](https://www.docker.com/).
 
 ## Test
 
 ```
 $ ./bin/test.sh
+```
+
+## Pact Test
+
+```
+$ ./bin/pact.sh
 ```
 
 ## Run
