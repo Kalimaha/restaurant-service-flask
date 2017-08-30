@@ -1,7 +1,7 @@
 from pact_test import *
 
 
-@has_pact_with('Restaurant Service')
+@honours_pact_with('UberEats')
 @pact_uri('http://guido-barbaglia.blog/src/pacts/pact.json')
 class UberEats(ServiceConsumerTest):
 

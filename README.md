@@ -9,21 +9,17 @@ Small web-app used to test the [pact-test](https://github.com/Kalimaha/pact-test
 
 ## Setup for Pact Test
 
-This web-app implements an hypothetical restaurant service which exposes two endpoints: one for the available menu and
-another one for single menu items. As a provider, this application needs to verify that it is honouring its pacts with
-the consumer(s).
+This web-app implements an hypothetical restaurant service which exposes two endpoints: one for the available menu and another one for single menu items. As a provider, this application needs to verify that it is honouring its pacts with the consumer(s).
 
 ### Pact Helper
 
-This helper is used by Pact Test to start and stop the web-app before and after the tests. There are few rules
-associated to the helper:
+This helper is used by Pact Test to start and stop the web-app before and after the tests. There are few rules associated to the helper:
 
 * it **must** extends `PactHelper` class from `pact_test`
 * it **must** implement the `setup` method
 * it **must** implement the `tear_down` method
 
-In addition to that, it is also possible to override default url (`localhost`) and port (`9999`) for the test. The
-following is a valid example of Pact Helper:
+In addition to that, it is also possible to override default url (`localhost`) and port (`9999`) for the test. The following is a valid example of Pact Helper:
 
 ```python
 import time
@@ -45,16 +41,14 @@ class RestaurantPactHelper(PactHelper):
         self.process.kill()
 ```
 
-This example starts and stops the web-app through [Gunicorn](http://gunicorn.org/) which is executed in a separate
-`subprocess`.
+This example starts and stops the web-app through [Gunicorn](http://gunicorn.org/) which is executed in a separate `subprocess`.
 
 ### State
 
-When a consumer sets a pact, it defines certain states. States are basically pre-requisites to your test. Before
-honouring the pacts, a provider needs to define such states. For example:
+When a consumer sets a pact, it defines certain states. States are basically pre-requisites to your test. Before honouring the pacts, a provider needs to define such states. For example:
 
 ```python
-@has_pact_with('Restaurant Service')
+@honours_pact_with('UberEats')
 @pact_uri('http://Kalimaha.github.io/src/pacts/pact.json')
 class UberEats(ServiceConsumerTest):
 
@@ -64,8 +58,7 @@ class UberEats(ServiceConsumerTest):
         DB.save(MenuItem('eggs'))
 ```
 
-In this example, the provider stores some test data in its DB in order to make the system ready to receive mock calls
-from the consumer and therefore verify the pact.
+In this example, the provider stores some test data in its DB in order to make the system ready to receive mock calls from the consumer and therefore verify the pact.
 
 ### Run Pact Test
 
