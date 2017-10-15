@@ -1,3 +1,5 @@
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=Kalimaha&repoName=restaurant-service-flask&branch=master&pipelineName=restaurant-service-flask&accountName=kalimaha&type=cf-1)]( https://g.codefresh.io/repositories/Kalimaha/restaurant-service-flask/builds?filter=trigger:build;branch:master;service:59e32084d2ab0a0001339b1f~restaurant-service-flask)
+
 # Restaurant Service - Flask Version
 
 Small web-app used to test the [pact-test](https://github.com/Kalimaha/pact-test) library.
