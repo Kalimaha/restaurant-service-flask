@@ -1,5 +1,5 @@
-[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=Kalimaha&repoName=restaurant-service-flask&branch=master&pipelineName=restaurant-service-flask&accountName=kalimaha&type=cf-1)]( https://g.codefresh.io/repositories/Kalimaha/restaurant-service-flask/builds?filter=trigger:build;branch:master;service:59e32084d2ab0a0001339b1f~restaurant-service-flask)
-[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=Kalimaha&repoName=restaurant-service-flask&branch=master&pipelineName=restaurant-service-flask-2.7&accountName=kalimaha&type=cf-1)]( https://g.codefresh.io/repositories/Kalimaha/restaurant-service-flask/builds?filter=trigger:build;branch:master;service:59e41ad540f0d10001f4541f~restaurant-service-flask-2.7)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=Kalimaha&repoName=restaurant-service-flask&branch=master&pipelineName=3.6&accountName=kalimaha&type=cf-1)]( https://g.codefresh.io/repositories/Kalimaha/restaurant-service-flask/builds?filter=trigger:build;branch:master;service:59e32084d2ab0a0001339b1f~3.6)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=Kalimaha&repoName=restaurant-service-flask&branch=master&pipelineName=2.7&accountName=kalimaha&type=cf-1)]( https://g.codefresh.io/repositories/Kalimaha/restaurant-service-flask/builds?filter=trigger:build;branch:master;service:59e41ad540f0d10001f4541f~2.7)
 
 # Restaurant Service - Flask Version
 
