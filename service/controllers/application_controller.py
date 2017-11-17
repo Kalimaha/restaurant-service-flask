@@ -19,3 +19,8 @@ def menu_item_service(menu_item_id):
         menu = MenuRepository.get_item(menu_item_id)
         return jsonify(menu.__dict__)
     return jsonify(error=404), 404
+
+
+@app.route('/pizzas/<pizza_type>/')
+def get_pizza(pizza_type):
+    return jsonify({'type': type})
