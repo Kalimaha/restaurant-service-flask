@@ -1,26 +1,18 @@
 from flask import Flask
 from flask import jsonify
-from service.repositories.menu_repository import MenuRepository
+from flask import make_response
 
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def menu_service():
-    menu = MenuRepository.get()
-    menu_dict = [menu_item.__dict__ for menu_item in menu]
-    return jsonify(menu_dict)
-
-
-@app.route('/<menu_item_id>/')
-def menu_item_service(menu_item_id):
-    if int(menu_item_id) == 42:
-        menu = MenuRepository.get_item(menu_item_id)
-        return jsonify(menu.__dict__)
-    return jsonify(error=404), 404
-
-
 @app.route('/pizzas/<pizza_type>/')
 def get_pizza(pizza_type):
-    return jsonify({'type': type})
+    if pizza_type == 'hawaiian':
+        return jsonify({'message': 'we do not serve pineapple with pizza'}), 404
+    return jsonify({'id': 42, 'type': pizza_type})
+
+
+@app.route('/orders/', methods=['POST'])
+def place_order():
+    return make_response(jsonify({'id': 123}), 201)
